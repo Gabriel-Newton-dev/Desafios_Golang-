@@ -4,8 +4,8 @@ package main
 
 import "fmt"
 
-var number1 int
-var number2 int
+var number1 float64
+var number2 float64
 var operadores string
 
 func main() {
