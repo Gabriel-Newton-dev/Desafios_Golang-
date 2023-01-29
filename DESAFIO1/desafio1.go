@@ -8,15 +8,27 @@ package main
 
 import "fmt"
 
-var digiteSuaIdade int
+var anoAtual int
+var anoDoNascimento int
 
 func main() {
-	fmt.Print("Digite a sua idade :")
-	fmt.Scan(&digiteSuaIdade)
 
-	conversorEmDias := digiteSuaIdade * 365
-	fmt.Printf("A sua idade %v anos convertida em dias fica %v dias.", digiteSuaIdade, conversorEmDias)
+	fmt.Println("Seja bem-vindo ao programa que converte a sua idade em dias!!")
+	fmt.Print("Por favor entre com ano do seu nascimento: ")
+	fmt.Scan(&anoDoNascimento)
+	ReturnAgeDays()
 
+}
+
+func ReturnAgeDays() {
+	anoAtual = 2023
+	idade := anoAtual - anoDoNascimento
+	resultado := idade * 365
+	if anoAtual == anoDoNascimento {
+		fmt.Println("Você ainda não completou 1 ano de idade")
+	} else {
+		fmt.Printf("A sua idade atuel é %d idade, e convertida em dias %d dias", idade, resultado)
+	}
 }
 
 // o gabarito desse desafio está abaixo, porém achei uma forma muito mais simplificada de fazer o programa, trazendo o mesmo resultado.
