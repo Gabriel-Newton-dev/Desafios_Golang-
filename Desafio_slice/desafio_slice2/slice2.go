@@ -21,7 +21,8 @@ func main() {
 	// - Anexe a ela os valores 53, 54 e 55 utilizando uma única declaração;
 	x = append(x, 53, 54, 55)
 	fmt.Println(x)
-	y = append(y, x[])
+	y = append(x)
 
 	fmt.Println(x)
+	fmt.Println(y)
 }
