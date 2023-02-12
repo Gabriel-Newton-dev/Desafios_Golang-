@@ -15,6 +15,12 @@ func main() {
 		"Caio Mello":     {"Jogar PS5", "Brincar"},
 		"Hulk":           {"Passear", "Comer ração"},
 	}
-	fmt.Println(mape)
+
+	for key, value := range mape {
+		fmt.Println(key)
+		for chave, valor := range value {
+			fmt.Println("\t", chave, " - ", valor)
+		}
+	}
 
 }
