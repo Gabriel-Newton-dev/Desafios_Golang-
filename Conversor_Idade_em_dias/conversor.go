@@ -9,16 +9,24 @@ package main
 import "fmt"
 
 var idade int
+var resultado int
 
 func main() {
 
 	fmt.Print("Digite a sua idade: ")
 	fmt.Scan(&idade)
+	ConversorDeIdadeEmDias()
 
-	conversor := 365 * idade
+}
 
-	fmt.Printf("A sua idade é %v anos, convertida em dias é: %v dias.", idade, conversor)
+func ConversorDeIdadeEmDias() {
+	conversor := idade * 365
+	if idade <= 0 {
+		fmt.Println("Idade inválida.")
+	} else {
+		fmt.Printf("A sua idade é %v anos, convertida em dias é: %v dias.\n", idade, conversor)
 
+	}
 }
 
 // package main
