@@ -41,6 +41,7 @@ func HondaUnmarshal() {
 }
 
 func DafraMotorbike() {
+	
 	Dafra := []byte(`{"Brand": "Dafra", "Model": "X5", "value": 15.302, "Sporty": false}`)
 
 	var DafraUnmarchal Motorbike
