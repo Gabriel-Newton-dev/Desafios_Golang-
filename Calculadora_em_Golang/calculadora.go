@@ -2,32 +2,31 @@ package main
 
 import "fmt"
 
-var number1 int
-var number2 int
-var operadores string
+var number1, number2 float64
+
+var operator string
 
 func main() {
 
-	fmt.Printf("Digite o primeiro número por favor: ")
+	fmt.Printf("Enter firts number: ")
 	fmt.Scan(&number1)
 
-	fmt.Print("Digite o segundo número: ")
+	fmt.Printf("Enter second number: ")
 	fmt.Scan(&number2)
 
-	fmt.Print("Qual operação deseja fazer (+ | - | *  | / | %) :")
-	fmt.Scan(&operadores)
+	fmt.Printf("Enter operator ( + | - | * | / ): ")
+	fmt.Scan(&operator)
 
-	switch operadores {
-	case "+":
-		fmt.Println(number1 + number2)
-	case "-":
-		fmt.Println(number1 - number2)
-	case "*":
-		fmt.Println(number1 * number2)
-	case "/":
-		fmt.Println(number1 / number2)
-	case "%":
-		fmt.Println(number1 % number2)
+	if operator == "+" {
+		fmt.Printf("%v + %v = %v \n", number1, number2, number1+number2)
 	}
-
+	if operator == "-" {
+		fmt.Printf("%v - %v = %v \n", number1, number2, number1-number2)
+	}
+	if operator == "*" {
+		fmt.Printf("%v * %v = %v \n", number1, number2, number1*number2)
+	}
+	if operator == "/" {
+		fmt.Printf("%v / %v = %v \n", number1, number2, number1/number2)
+	}
 }
