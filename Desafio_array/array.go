@@ -10,11 +10,10 @@ import "fmt"
 
 func main() {
 
-	array := [5]int{10, 20, 30, 40, 50}
+	array := [5]int{1, 2, 3, 4, 5}
 
-	for _, value := range array {
-		fmt.Println(value)
+	for key, value := range array {
+		fmt.Println(key, value)
 	}
-
-	fmt.Printf("%T", array)
+	fmt.Printf("%T \n", array)
 }
